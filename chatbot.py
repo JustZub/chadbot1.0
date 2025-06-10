@@ -72,6 +72,7 @@ def ejecutar_chat():
     
         inicializar_estado_chat()
         mensaje_usuario = obtener_mensaje_usuario()
+        obtener_mensajes_previos()
         print(mensaje_usuario)
         
         if mensaje_usuario:
