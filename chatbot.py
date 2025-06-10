@@ -34,7 +34,7 @@ def inicializar_estado_chat():
 def obtener_mensajes_previos():
       for mensaje in st.session_state.mensajes: #recorre los mensajes de st.session_state.mensajes
             with st.chat_message(mensaje['role']): #quien lo envia?
-                  st.markdown(["content"]) #que envia?
+                  st.markdown(mensaje["content"]) #que envia?
 
 
 
