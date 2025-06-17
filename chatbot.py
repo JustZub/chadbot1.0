@@ -1,6 +1,5 @@
 import streamlit as st
 import groq 
-import openai
 
 MODELOS = ['llama3-8b-8192', 'llama3-70b-8192','mixtral-8x7b-32768']
 
@@ -14,8 +13,7 @@ def configurar_pagina():
 
 def crear_ciente_groq():
         groq_api_key = st.secrets['GROQ_API_KEY']
-        openai.api_base = "https://api.groq.com/openai/v1"
-        return openai
+        return groq.Groq(api_key=groq_api_key)
     
     #mostrar barra lateral
 
